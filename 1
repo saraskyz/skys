@@ -1,0 +1,33 @@
+//+------------------------------------------------------------------
+//|                                              BR 4 Bar Fractal Pattern   |
+//+------------------------------------------------------------------
+#property copyright "BlueRain"
+
+
+
+#property indicator_chart_window
+#property indicator_buffers 2
+
+#property strict
+
+//1,2 - Buy/Sell arrow signal
+#property indicator_color1 clrBlue
+#property indicator_color2 clrRed
+
+
+
+//ENGULFING
+#property indicator_width1 2
+#property indicator_width2 2
+
+
+extern bool  Include_5Bar_Pattern = true;
+extern bool  Show_TP_Line = true;
+extern double TP = 100;
+extern color BuyTextColor = clrBlue;
+extern color SellTextColor = clrRed;
+extern color BuyLineColor = clrBlue;
+extern color SellLineColor = clrRed;
+
+extern bool  Show_Box = true;
+extern color Box_Color = clrYellow;
