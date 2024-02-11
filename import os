@@ -1,0 +1,12 @@
+    import os
+
+    def restart_system():
+        if os.name == 'nt':  # برای سیستم‌های ویندوز
+            os.system('shutdown /r /t 0')
+        elif os.name == 'posix':  # برای سیستم‌های Unix/Linux
+            os.system('sudo reboot')
+    
+    if __name__ == "__main__":
+        restart_system()
+    
+
