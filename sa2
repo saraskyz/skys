@@ -1,0 +1,109 @@
+ //Do vlines for previous sessions----------------------------------------------------------
+    if(__Prior_Sessions_To_Show >0 && Period() <= __Prior_Sessions_Max_TF)
+      {
+      int bps2 = bps +1;
+      for(i= int (shift); i<=(shift+(bps2*(__Prior_Sessions_To_Show))); i++)
+        {
+        h=TimeHour(Time[i]);
+        m=TimeMinute(Time[i]);
+
+        //Asian Open vLine
+        if(__Ao_in_All_Sessions) {
+        MF = int (MathFloor(GMT_At_Ao));
+        if((Period() > 30) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_Asian_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_Ao != MF) && (h == MF + Broker_GMT_Offset) && (m == 30))
+          {
+          OpenPrior(i, vLabels_Asian_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_Ao == MF) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_Asian_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          } }}}
+
+        //Berlin Open vLine
+        if(__Fo_in_All_Sessions) {
+        MF = int (MathFloor(GMT_At_Fo));
+        if((Period() > 30) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_Berlin_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_Fo != MF) && (h == MF + Broker_GMT_Offset) && (m == 30))
+          {
+          OpenPrior(i, vLabels_Berlin_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_Fo == MF) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_Berlin_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          } }}}
+
+        //London Open vLine
+        MF = int (MathFloor(GMT_At_Lo));
+        if((Period() > 30) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_London_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_Lo != MF) && (h == MF + Broker_GMT_Offset) && (m == 30))
+          {
+          OpenPrior(i, vLabels_London_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_Lo == MF) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_London_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          } }}
+
+        //NewYork Open vLine
+        MF = int (MathFloor(GMT_At_NYo));
+        if((Period() > 30) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_NewYork_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_NYo != MF) && (h == MF + Broker_GMT_Offset) && (m == 30))
+          {
+          OpenPrior(i, vLabels_NewYork_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_NYo == MF) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_NewYork_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          } }}
+
+        //London Close vLine
+        MF = int (MathFloor(GMT_At_Lc));
+        if((Period() > 30) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_London_Close, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_Lc != MF) && (h == MF + Broker_GMT_Offset) && (m == 30))
+          {
+          OpenPrior(i, vLabels_London_Close, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_Lc == MF) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_London_Close, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          } }}
+        }//End prior sessions shift loop
+      }//End prior sessions routine
+    }//End vLines routine
+
+  //Fibo Lines---------------------------------------------------------------------------------
+  if((Natural_Fibos) && (Period()<= __Fibos_Max_TF))
+    {
+    if(__Use_Tz_Filter)
+      {
