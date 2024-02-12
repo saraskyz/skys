@@ -1,0 +1,162 @@
+ if(vLines_On && Period()<= __Current_Session_Max_TF)
+    {
+    //Calculate position for vline labels
+    level = WindowPriceMax();
+    //Calculate bars per session
+          if (Period()==1) {bps = 1439;}
+    else {if (Period()==5) {bps = 287;}
+    else {if (Period()==15){bps = 95;}
+    else {if (Period()==30){bps = 47;}
+    else {if (Period()==60){bps = 23;} }}}}
+    //Define bar starting prior sessions display
+    shift = iBarShift(NULL,NULL,iTime(NULL,PERIOD_D1,0));
+
+    //Do vlines for current session------------------------------------------------------------
+    if(DayOfWeek()==0)
+      {
+      //Code for any broker on Sunday is same type code used for prior sessions because we
+      //have to recreate previous Friday session vLines since Sunday is just a short session
+      //that is a continuation of Friday.  This applies to all vLines except "Ao".
+      //Execute loop for bars per session
+      for(i= int (shift); i<=(shift+bps); i++)
+        {
+        h=TimeHour(Time[i]);
+        m=TimeMinute(Time[i]);
+
+        //Asian Open vLine (prior session)
+        if( __Prior_Ao_with_Current_Session_only) {
+        MF = int (MathFloor(GMT_At_Ao));
+        if((Period() > 30) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_Asian_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_Ao != MF) && (h == MF + Broker_GMT_Offset) && (m == 30))
+          {
+          OpenPrior(i, vLabels_Asian_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_Ao == MF) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_Asian_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          } }}}
+
+        //Berlin Open vLine (current session)
+        if(__Fo_in_All_Sessions) {
+        MF = int (MathFloor(GMT_At_Fo));
+        if((Period() > 30) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_Berlin_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_Fo != MF) && (h == MF + Broker_GMT_Offset) && (m == 30))
+          {
+          OpenPrior(i, vLabels_Berlin_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_Fo == MF) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_Berlin_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          } }}}
+
+        //London Open vLine (current session)
+        MF = int (MathFloor(GMT_At_Lo));
+        if((Period() > 30) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_London_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_Lo != MF) && (h == MF + Broker_GMT_Offset) && (m == 30))
+          {
+          OpenPrior(i, vLabels_London_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_Lo == MF) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_London_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          } }}
+
+        //NewYork Open vLine (current session)
+        MF = int (MathFloor(GMT_At_NYo));
+        if((Period() > 30) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_NewYork_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_NYo != MF) && (h == MF + Broker_GMT_Offset) && (m == 30))
+          {
+          OpenPrior(i, vLabels_NewYork_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_NYo == MF) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_NewYork_Open, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          } }}
+
+        //London Close vLine (current session)
+        MF = int (MathFloor(GMT_At_Lc));
+        if((Period() > 30) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_London_Close, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_Lc != MF) && (h == MF + Broker_GMT_Offset) && (m == 30))
+          {
+          OpenPrior(i, vLabels_London_Close, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_Lc == MF) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_London_Close, vLines_Color, vLines_Style_01234,
+          vLines_Width_12345, level);
+          } }}
+        }//End prior sessions shift loop
+
+        //Asian Open vLine (current session)
+        if(__Ao_in_All_Sessions)
+          {
+          OpenToday(vLabels_Asian_Open, GMT_At_Ao + Broker_GMT_Offset,
+          vLines_Color, vLines_Style_01234, vLines_Width_12345, level);
+          }
+      }//End Short Sunday loop for broker at GMT
+
+    else //for all brokers Monday thru Friday      
+      {
+      //Do Ao vline for prior session
+      if(__Prior_Ao_with_Current_Session_only &&  __Prior_Sessions_To_Show==0)
+        {
+        for(i= int (shift+1); i<=(shift+bps+1); i++)
+          {
+          h=TimeHour(Time[i]);
+          m=TimeMinute(Time[i]);
+
+          //Asian Open vLine
+          MF = int (MathFloor(GMT_At_Ao));
+          if((Period() > 30) && (h == MF + Broker_GMT_Offset) && (m == 0))
+            {
+            OpenPrior(i, vLabels_Asian_Open, vLines_Color, vLines_Style_01234,
+            vLines_Width_12345, level);
+            }
+          else {if((GMT_At_Ao != MF) && (h == MF + Broker_GMT_Offset) && (m == 30))
+            {
+            OpenPrior(i, vLabels_Asian_Open, vLines_Color, vLines_Style_01234,
+            vLines_Width_12345, level);
+            }
+          else {if((GMT_At_Ao == MF) && (h == MF + Broker_GMT_Offset) && (m == 0))
+            {
+            OpenPrior(i, vLabels_Asian_Open, vLines_Color, vLines_Style_01234,
+            vLines_Width_12345, level);
+            } }}
+          }
+        }//End single prior Ao vLine
+
+      //Asian Open vLine (current session)
+      if(__Ao_in_All_Sessions)
+        {
+        OpenToday(vLabels_Asian_Open, GMT_At_Ao + Broker_GMT_Offset,
+        vLines_Color, vLines_Style_01234, vLines_Width_12345, level);
+        }
