@@ -41,7 +41,11 @@
           OpenPrior(i, vLabels_Asian_Open, vLines_Color, vLines_Style_01234,
           vLines_Width_12345, level);
           } }}}
-
+ else {if((GMT_At_Ao == MF) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_Asian_Open, vLines_Color, vLines_Style_01234, else {if((GMT_At_Ao == MF) && (h == MF + Broker_GMT_Offset) && (m == 0))
+          {
+          OpenPrior(i, vLabels_Asian_Open, vLines_Color, vLines_Style_01234,
         //Berlin Open vLine (current session)
         if(__Fo_in_All_Sessions) {
         MF = int (MathFloor(GMT_At_Fo));
