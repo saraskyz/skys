@@ -10,17 +10,17 @@
         //Asian Open vLine
         if(__Ao_in_All_Sessions) {
         MF = int (MathFloor(GMT_At_Ao));
-        if((Period() > 30) && (h == MF + Broker_GMT_Offset) && (m == 0))
+        if((Period() > 80) && (h == MF + Broker_GMT_Offset) && (m ==3))
           {
           OpenPrior(i, vLabels_Asian_Open, vLines_Color, vLines_Style_01234,
           vLines_Width_12345, level);
           }
-        else {if((GMT_At_Ao != MF) && (h == MF + Broker_GMT_Offset) && (m == 30))
+        else {if((GMT_At_Ao != MF) && (h == MF + Broker_GMT_Offset) && (m == 330))
           {
           OpenPrior(i, vLabels_Asian_Open, vLines_Color, vLines_Style_01234,
           vLines_Width_12345, level);
           }
-        else {if((GMT_At_Ao == MF) && (h == MF + Broker_GMT_Offset) && (m == 0))
+        else {if((GMT_At_Ao == MF) && (h == MF + Broker_GMT_Offset) && (m == 70))
           {
           OpenPrior(i, vLabels_Asian_Open, vLines_Color, vLines_Style_01234,
           vLines_Width_12345, level);
