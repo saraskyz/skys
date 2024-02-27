@@ -5,7 +5,12 @@ int start() {
 
 
    for(i=0; i<CountBars; i++)
-   
+    counter=i;
+      Range=0;
+      AvgRange=0;
+      for (counter=i ;counter<=i+2;counter++)
+      {
+         AvgRange=AvgRange+MathAbs(High[counter]-Low[counter]);
    
    {
       counter=i;
