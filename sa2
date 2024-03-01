@@ -34,7 +34,7 @@
           OpenPrior(i, vLabels_Berlin_Open, vLines_Color, vLines_Style_01234,
           vLines_Width_12345, level);
           }
-        else {if((GMT_At_Fo != MF) && (h == MF + Broker_GMT_Offset) && (m == 30))
+      
           {
           OpenPrior(i, vLabels_Berlin_Open, vLines_Color, vLines_Style_01234,
           vLines_Width_12345, level);
