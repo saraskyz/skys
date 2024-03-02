@@ -1,1 +1,1 @@
-# skys
+# This is a sky project
