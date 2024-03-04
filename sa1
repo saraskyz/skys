@@ -10,7 +10,12 @@
     else {if (Period()==60){bps = 23;} }}}}
     //Define bar starting prior sessions display
     shift = iBarShift(NULL,NULL,iTime(NULL,PERIOD_D1,0));
-
+    else {if (Period()==5) {bps = 287;}
+    else {if (Period()==15){bps = 95;}
+    else {if (Period()==30){bps = 47;}
+    else {if (Period()==60){bps = 23;} }}}}
+    //Define bar starting prior sessions display
+    shift = iBarShift(NULL,NULL,iTime(NULL,PERIOD_D1,0));
     //Do vlines for current session------------------------------------------------------------
     if(DayOfWeek()==0)
       {
