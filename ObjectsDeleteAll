@@ -57,12 +57,7 @@
    ObjectDelete("WP_S138_label");
    ObjectDelete("WP_S161");
    ObjectDelete("WP_S161_label");
-   ObjectDelete("WP_R200");
-   ObjectDelete("WP_R200_label");
-   ObjectDelete("WP_S200");
-   ObjectDelete("WP_S200_label");
-   ObjectDelete("WP_label");
-   ObjectDelete("WP_line");
+
    ObjectDelete("WP_R38");
    ObjectDelete("WP_R38_label");
    ObjectDelete("WP_S38");
