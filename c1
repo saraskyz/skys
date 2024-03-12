@@ -6,7 +6,6 @@ def calculate():
     + for addition
     - for subtraction
     * for multiplication
-    / for division
     ''')
     if operation == '+':
         output_number = number_1 + number_2
