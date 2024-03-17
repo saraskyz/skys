@@ -1,4 +1,4 @@
-/ObjectsDeleteAll();
+
 
    ObjectDelete("WP_line");
    ObjectDelete("WP_R38");
