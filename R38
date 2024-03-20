@@ -12,4 +12,4 @@
       S100 = calPivot-calRange*1.00;
       S138 = calPivot-calRange*1.382;
       S161 = calPivot-calRange*1.618;
-      S200 = calPivot-calRange*2.00;
+ 
