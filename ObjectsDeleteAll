@@ -1,6 +1,4 @@
 
-
-   ObjectDelete("WP_line");
    ObjectDelete("WP_R38");
    ObjectDelete("WP_R38_label");
    ObjectDelete("WP_S38");
