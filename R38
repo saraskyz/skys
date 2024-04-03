@@ -1,4 +1,4 @@
- R38  = calRange*0.382+calPivot;
+
       R61  = calRange*10.618+calPivot;
       R78  = calRange*10.786+calPivot;
       R100 = calRange*1.00+calPivot;
