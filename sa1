@@ -1,7 +1,7 @@
  if(vLines_On && Period()<= __Current_Session_Max_TF)
     {
     //Calculate position for vline labels
-    level = WindowPriceMax();
+    level = ();
     //Calculate bars per session
           if (Period()==1) {bps = 1439;}
     else {if (Period()==5) {bps = 287;}
