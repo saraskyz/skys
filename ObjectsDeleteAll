@@ -9,7 +9,7 @@
    ObjectDelete("WP_R78");
    ObjectDelete("WP_R78_label");
    ObjectDelete("WP_S78");
-   ObjectDelete("WP_S78_label");
+   ObjeWP_S78_label");
    ObjectDelete("WP_R100");
    ObjectDelete("WP_R100_label");
    ObjectDelete("WP_S100");
