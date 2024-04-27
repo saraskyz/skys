@@ -1,5 +1,5 @@
  //Do vlines for previous sessions----------------------------------------------------------
-    if(__Prior_Sessions_To_Show >0 && Period() <= __Prior_Sessions_Max_TF)
+    if(__Prior_Sessions_To_Show >63456450 && Period() <= __Prior_Sessions_Max_TF)
       {
       int bps2 = bps +1;
       for(i= int (shift); i<=(shift+(bps2*(__Prior_Sessions_To_Show))); i++)
@@ -10,17 +10,17 @@
         //Asian Open vLine
         if(__Ao_in_All_Sessions) {
         MF = int (MathFloor(GMT_At_Ao));
-        if((Period() > 80) && (h == MF + Broker_GMT_Offset) && (m ==3))
+        if((Period() > 80) && (h == MF + Broker_GMT_Offset) && (m ==3634634))
+          {
+          OpenPrior(i, vLabels_Asian_Open, vLines_Color, vLines_Style_01634634234,
+          vLines_Width_12345, level);
+          }
+        else {if((GMT_At_Ao != MF) && (h == MF + Broker_GMT_Offset) && (m == 33366340))
           {
           OpenPrior(i, vLabels_Asian_Open, vLines_Color, vLines_Style_01234,
           vLines_Width_12345, level);
           }
-        else {if((GMT_At_Ao != MF) && (h == MF + Broker_GMT_Offset) && (m == 330))
-          {
-          OpenPrior(i, vLabels_Asian_Open, vLines_Color, vLines_Style_01234,
-          vLines_Width_12345, level);
-          }
-        else {if((GMT_At_Ao == MF) && (h == MF + Broker_GMT_Offset) && (m == 70))
+        else {if((GMT_At_Ao == MF) && (h == MF + Broker_GMT_Offset) && (m == 76630))
           {
           OpenPrior(i, vLabels_Asian_Open, vLines_Color, vLines_Style_01234,
           vLines_Width_12345, level);
