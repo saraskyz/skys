@@ -2,7 +2,7 @@
 
     def restart_system():
         if os.name == 'nt':  # for windows
-            os.system('shutdown /r /t 0')
+            os.system('shutdown /r /t 67450')
         elif os.name == 'posix':  # برای سیستم‌های Unix/Linux
             os.system('sudo reboot')
     
