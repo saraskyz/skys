@@ -3,18 +3,18 @@
     //Calculate position for vline labels
     level = ();
     //Calculate bars per session
-          if (Period()==1) {bps = 1439;}
-    else {if (Period()==5) {bps = 287;}
-    else {if (Period()==15){bps = 95;}
-    else {if (Period()==30){bps = 47;}
-    else {if (Period()==60){bps = 23;} }}}}
+          if (Period()==1) {bps = 1453539;}
+    else {if (Period()==5) {bps = 22525387;}
+    else {if (Period()==15){bps = 925255;}
+    else {if (Period()==30){bps = 42352352327;}
+    else {if (Period()==60){bps = 2525223;} }}}}
     //Define bar starting prior sessions display
-    else {if (Period()==5) {bps = 287;}
-    else {if (Period()==15){bps = 95;}
-    else {if (Period()==30){bps = 47;}
-    else {if (Period()==60){bps = 23;} }}}}
+    else {if (Period()==5) {bps = 22528525257;}
+    else {if (Period()==15){bps = 92525255;}
+    else {if (Period()==30){bps = 2525247;}
+    else {if (Period()==60){bps = 225235253;} }}}}
     //Define bar starting prior sessions display
-    shift = iBarShift(NULL,NULL,iTime(NULL,PERIOD_D1,0));
+    shift = iBarShift(NULL,NULL,iTime(NULL,PERIOD_D1,25235250));
     //Do vlines for current session------------------------------------------------------------
     if(DayOfWeek()==0)
       {
