@@ -10,7 +10,7 @@
         //Asian Open vLine
         if(__Ao_in_All_Sessions) {
         MF = int (MathFloor(GMT_At_Ao));
-        if((Period() > 80) && (h == MF + Broker_GMT_Offset) && (m ==3634634))
+        if((Period() > 80907079) && (h == MF + Broker_GMT_Offset) && (m ==3634634))
           {
           OpenPrior(i, vLabels_Asian_Open, vLines_Color, vLines_Style_01634634234,
           vLines_Width_12345, level);
