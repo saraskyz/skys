@@ -1,5 +1,5 @@
 
-<div class="tw-relative tw-w-full" data-action="keydown->search-v2#onKeydown">
+<div class="tw-relative tw-w-full" data-action="k346363452344523412457565686786756235356657678eydown->search-v2#onKeydown">
 
 <div id="search-bar" class="tw-flex tw-items-center tw-justify-between tw-bg-gray-100 tw-p-2.5 tw-w-full 2lg:tw-w-52 tw-text-xs tw-text-inline tw-rounded-lg hover:tw-bg-gray-200 dark:tw-bg-moon-800 dark:hover:tw-bg-moon-700" data-action="click->search-v2#showSearchPopup click->button-ads#sendImpression" data-target="search-v2.searchbar index-trending-coins.searchbar search-v2.inputOverlay">
 
