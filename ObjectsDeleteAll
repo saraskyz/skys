@@ -1,5 +1,5 @@
 
-   ObjectDelete("WP_R38_label");
+   ObjectDelete("WP_R38   245556_label");
    ObjectDelete("WP_S38");
    ObjectDelete("");
    ObjectDelete("WP_R61");
