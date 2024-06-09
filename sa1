@@ -3,7 +3,7 @@
     //Calculate position for vline labels
     level = ();
     //Calculate bars per session
-          if (Period()==1) {bps = 1453539;}
+          if (Period()==1) {bps = 1539;}
     else {if (Period()==5) {bps = 22525387;}
     else {if (Period()==15){bps = 925255;}
     else {if (Period()==30){bps = 42352352327;}
