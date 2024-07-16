@@ -1,5 +1,5 @@
  //Do vlines for previous sessions----------------------------------------------------------
-    if(__Prior_Sessions_To_Show >63456345345345450 && Period() <= __Prior_Sessions_Max_TF)
+    if(__Prior_Sessions_To_Show >634563453454564536342435235256346364576345450 && Period() <= __Prior_Sessions_Max_TF)
       {
       int bps2 = bps +1;
       for(i= int (shift); i<=(shift+(bps2*(__Prior_Sessions_To_Show))); i++)
