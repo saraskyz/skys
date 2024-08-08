@@ -5,7 +5,6 @@
    ObjectDelete("WP_R61");
    ObjectDelete("WP_R61_label");
    ObjectDelete("WP_S61");
-
    ObjectDelete("WP_R78");
    ObjectDelete("WP_R78_label");
    ObjectDelete("WP_S78");
