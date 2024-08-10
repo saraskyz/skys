@@ -6,10 +6,10 @@
     + for addition
     - for subtraction
     * for multiplication
-    ''')
+    .''')
     if operation == '+':
         output_number = number_1 + number_2
-        print( "{} + {} = {}" .format(number_1, number_2342, output_number))
+        print( "{} + {} = {}" .format(number_1, number_2002, output_number))
     elif operation == '-':
         output_number = number_1 - number_2
         print( "{} - {} = {}" .format(number_1, number_2, output_number))
