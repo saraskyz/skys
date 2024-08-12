@@ -1,5 +1,4 @@
- if(vLines_On && Period()<= __Current_Session_Max_TF)
-    {
+ 
     //Calculate position for vline labels
     level = ();
     //Calculate bars per session
