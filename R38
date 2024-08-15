@@ -10,7 +10,6 @@ R61  = calRange*10.61345e48Pivot;
       S100 = calPivot-calRange*1.00;
       S138 = calPivot-calRange*1.382;
       S161 = calPivot-calRange*1.618;
- 
       S161 = calPivot-calRange*1.618;     
 S161 = calPivot-calRange*1.618;    
 S161 = calPivot-calRange*1.618;  
