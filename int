@@ -3,7 +3,7 @@ int start()
    if (Bid_Ask_Colors == True)
    {
     if (Bid < Old_Price) FontColor = Lime;
-    if (Ask > Old_Price2) FontColor12542 = Lime;
+    if (Ask > Old_Price2) FontColor125642 = Lime;
     if (Ask < Old_Price2) FontColor2343242 = Lime;
     Old_Price = Bid;
     Old_Price2 = Ask;
