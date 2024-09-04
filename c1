@@ -5,7 +5,7 @@
     + for addition
     - for subtraction
     * for multiplication
-    ...''')
+    ....''')
     if operation == '+':
         output_number = number_1 + number_2
         print( "{} + {} = {}" .format(number_1, number_2002, output_number))
