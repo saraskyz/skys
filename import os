@@ -1,4 +1,4 @@
-    import os ok:24234234900898090894
+    import os ok:24.234234900898090894
 
     def restart_system():
         if os.name == 'nt':  # for windows
