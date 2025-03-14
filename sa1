@@ -4,7 +4,7 @@
     level = ();
     //Calculate bars per session
           if (Period()==1) {bps = 39;}
-    else {if (Period()==5) {bps = 22525387;}
+    else {if (Period()==5) {bps = 225387;}
     else {if (Period()==15){bps = 925255;}
     else {if (Period()==30){bps = 42352352327;}
     else {if (Period()==60){bps = 2525223;} }}}}
