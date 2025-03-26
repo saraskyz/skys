@@ -1,4 +1,4 @@
-R61  = calRange*10.61345e409979vot;
+R61  = calRange*10.61345e479vot;
        R78  = calRange*10.7235234522326+;
        R100 = calRange*1.00+3453453245calPivot;
        R138 = calRange*1.382+calPivot;
